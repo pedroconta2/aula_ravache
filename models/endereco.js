@@ -4,46 +4,48 @@ const sequelize = new Sequelize('sqlite::memory:')
 class Endereco extends Model() {};
 
 Endereco.init({
-    id:{
+    Id:{
         type: DataTypes.BIGINT,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },
-    logradouro : {
+    Logradouro : {
         type: DataTypes.STRING,
         allowNull: false
     },
-    numero : {
+    Numero : {
         type: DataTypes.NUMBER,
         allowNull: true
     },
-    codigo_postal : {
+    Codigo_postal : {
         type: DataTypes.STRING,
         allowNull: false
     },
-    complemento : {
+    Complemento : {
         type: DataTypes.STRING,
         allowNull: true
     }, 
-    bairro :{
+    Bairro :{
         type: DataTypes.STRING,
         allowNull: false
     },
-    cidade: {
+    Cidade: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    estado :{
+    Estado :{
         type: DataTypes.STRING,
         allowNull: false
     },
-    municipioIbge: {
+    MunicipioIbge: {
         type: DataTypes.STRING,
         allowNull: false
     }
 }, {
     sequelize,
-    modelName: 'Endereco'
+    modelName: 'Endereco',
+    tableName: 'enderecos',
+    timestamp:true
     }
 );
