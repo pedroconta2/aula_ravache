@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const uri = "http://localhost"
-const axios = require('axios');
-const enderecoController = require('./controllers/EnderecoController');
 
-app.get("/", (req,res) => {
-    res.send("Hello World")
-})
+const rotas = require('./router');
+
+// app.get("/", (req,res) => {
+//     res.send("Hello World")
+// })
 
 // app.get("/consulta-cep/:cep", async (req,res) => {
 //     const cep = req.params.cep;
@@ -25,9 +25,8 @@ app.get("/", (req,res) => {
 //     res.status(500).send('Erro ao consultar o CEP')
 //     }
 // })
-
-app.get('/enderecos/:cep', enderecoController.createEndereco);
-
+app.use(express.json());
+app.use('/api', rotas);
 
 app.listen(port, () => {
     console.log(`Servidor rodando em ${uri}:${port}`)
