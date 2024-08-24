@@ -1,44 +1,44 @@
-const { Sequelize, Sequelize, DataTypes, Model } = require("sequelize");
-const sequelize = new Sequelize('sqlite::memory:')
+const { DataTypes, Model, Sequelize } = require('sequelize');
+const sequelize = new Sequelize('postgres://postgres:postgres@localhost:5432/apinode');
 
-class Endereco extends Model() {};
+class Endereco extends Model {};
 
 Endereco.init({
-    Id:{
+    id:{
         type: DataTypes.BIGINT,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },
-    Logradouro : {
+    logradouro : {
         type: DataTypes.STRING,
         allowNull: false
     },
-    Numero : {
+    numero : {
         type: DataTypes.NUMBER,
         allowNull: true
     },
-    Codigo_postal : {
+    codigo_postal : {
         type: DataTypes.STRING,
         allowNull: false
     },
-    Complemento : {
+    complemento : {
         type: DataTypes.STRING,
         allowNull: true
     }, 
-    Bairro :{
+    bairro :{
         type: DataTypes.STRING,
         allowNull: false
     },
-    Cidade: {
+    cidade: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    Estado :{
+    estado :{
         type: DataTypes.STRING,
         allowNull: false
     },
-    MunicipioIbge: {
+    municipioIbge: {
         type: DataTypes.STRING,
         allowNull: false
     }
@@ -49,3 +49,5 @@ Endereco.init({
     timestamp:true
     }
 );
+
+module.exports = Endereco;
