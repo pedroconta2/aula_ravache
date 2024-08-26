@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-     await queryInterface.createTable('enderecos', {
+     await queryInterface.createTable('Enderecos', {
     Id:{
         type: Sequelize.BIGINT,
         allowNull: false,
@@ -46,7 +46,7 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('enderecos');
+    await queryInterface.dropTable('Enderecos');
 
   }
 };

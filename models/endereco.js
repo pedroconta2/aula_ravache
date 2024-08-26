@@ -1,7 +1,7 @@
 const { DataTypes, Model, Sequelize } = require('sequelize');
-const sequelize = new Sequelize('postgres://root:12345@localhost:5432/apinode');
+const sequelize = new Sequelize('postgres://root:passwrd@localhost:5432/dse');
 
-class Endereco extends Model {};
+class Endereco extends Model {}
 
 Endereco.init({
     Id:{
@@ -45,7 +45,7 @@ Endereco.init({
 }, {
     sequelize,
     modelName: 'Endereco',
-    tableName: 'enderecos',
+    tableName: 'Enderecos',
     timestamp:true
     }
 );

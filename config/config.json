@@ -1,24 +1,24 @@
 {
   "development": {
     "username": "root",
-    "password": 12345,
-    "database": "aula_ravage",
+    "password": "passwrd",
+    "database": "dse",
     "host": "localhost",
     "port":"5432",
     "dialect": "postgres"
   },
   "test": {
     "username": "root",
-    "password": 12345,
-    "database": "aula_ravage",
+    "password": "passwrd",
+    "database": "dse",
     "host": "localhost",
     "port":"5432",
     "dialect": "postgres"
   },
   "production": {
     "username": "root",
-    "password": 12345,
-    "database": "aula_ravage",
+    "password": "passwrd",
+    "database": "dse",
     "host": "localhost",
     "port":"5432",
     "dialect": "postgres"
