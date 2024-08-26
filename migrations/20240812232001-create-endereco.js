@@ -15,7 +15,7 @@ module.exports = {
         allowNull: false
     },
     Numero : {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
         allowNull: true
     },
     Codigo_postal : {
@@ -41,7 +41,17 @@ module.exports = {
     MunicipioIbge: {
         type: Sequelize.STRING,
         allowNull: false
-    }});
+    },
+         createdAt: {
+          allowNull: false,
+              type: Sequelize.DATE,
+              defaultValue: Sequelize.fn('NOW')
+      },
+      updatedAt: {
+          allowNull: false,
+              type: Sequelize.DATE,
+              defaultValue: Sequelize.fn('NOW')
+      }});
      
   },
 
